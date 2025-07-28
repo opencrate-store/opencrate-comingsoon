@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 16px; margin: 0; padding: 0;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <link rel="stylesheet" href="nicepage.css" media="screen">
+  <link rel="stylesheet" href="index.css" media="screen">
+  <script class="u-script" src="jquery.js" defer></script>
+  <script class="u-script" src="nicepage.js" defer></script>
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Open+Sans:300,400,700">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+    }
+
+    .header-container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      height: 500px;
+    }
+
+    .flick-background {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .logo-overlay {
+      position: absolute;
+      top: 30px;
+      left: 48px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-overlay img {
+      height: 40px;
+      margin-right: 8px;
+    }
+
+    .logo-text {
+      font-family: 'Oswald', sans-serif;
+      font-size: 24px;
+      color: white;
+    }
+
+    .contact-button {
+      position: absolute;
+      bottom: 35px; /* Aligns with PRE ORDER NOW button on desktop */
+      left: 10%;
+      transform: translateX(-50%);
+      background-color: #FFC107;
+      color: black;
+      padding: 15px 30px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      z-index: 10; /* Ensures it overlays PRE ORDER NOW */
+      width: 200px; /* Matches PRE ORDER NOW button width */
+      text-align: center;
+    }
+
+    .coming-soon-section {
+      background-color: black;
+      padding: 80px 10px 90px;
+      text-align: center;
+    }
+
+    .coming-soon {
+      font-family: 'Oswald', sans-serif;
+      font-size: 80px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 4px;
+      margin-bottom: 60px;
+    }
+
+    .loading-bar-container {
+      width: 60%;
+      margin: 0 auto;
+      background-color: #333;
+      height: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .loading-bar {
+      width: 0%;
+      height: 100%;
+      background-color: white;
+      animation: load 3s infinite;
+    }
+
+    @keyframes load {
+      0% { width: 0%; }
+      50% { width: 100%; }
+      100% { width: 0%; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #111;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-container {
+        height: 300px;
+      }
+
+      .logo-overlay {
+        top: 15px;
+        left: 15px;
+      }
+
+      .logo-overlay img {
+        height: 30px;
+      }
+
+      .logo-text {
+        font-size: 18px;
+      }
+
+      .contact-button {
+        bottom: 35px; /* Aligns with PRE ORDER NOW on smaller screens */
+        left: 10%;
+        transform: translateX(-50%);
+        font-size: 20px;
+        padding: 10px 20px;
+        width: 150px; /* Adjusted width for mobile */
+      }
+
+      .coming-soon {
+        font-size: 50px;
+        margin-bottom: 40px;
+      }
+
+      .loading-bar-container {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-container {
+        height: 200px;
+      }
+
+      .logo-overlay {
+        top: 10px;
+        left: 10px;
+      }
+
+      .logo-overlay img {
+        height: 25px;
+      }
+
+      .logo-text {
+        font-size: 16px;
+      }
+
+      .contact-button {
+        bottom: 35px; /* Aligns with PRE ORDER NOW on mobile */
+        left: 10%;
+        transform: translateX(-50%);
+        font-size: 18px;
+        padding: 8px 15px;
+        width: 120px; /* Adjusted width for mobile */
+      }
+
+      .coming-soon {
+        font-size: 40px;
+        margin-bottom: 30px;
+      }
+
+      .loading-bar-container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <!-- Background Image -->
+      <img src="images/IMG_1116.PNG" alt="FLICK Background" class="flick-background">
+
+      <!-- Logo Overlay -->
+      <div class="logo-overlay">
+        <img src="images/IMG_1096.PNG" alt="Opencrate Logo">
+        <span class="logo-text">opencrate</span>
+      </div>
+
+      <!-- Contact Us Button -->
+      <button class="contact-button">Contact Us</button>
+    </div>
+  </header>
+
+  <!-- COMING SOON Section -->
+  <section class="coming-soon-section">
+    <div class="coming-soon">COMING SOON</div>
+    <div class="loading-bar-container">
+      <div class="loading-bar"></div>
+    </div>
+  </section>
+
+  <footer>
+    All Rights Reserved 2025
+  </footer>
+</body>
+</html>
